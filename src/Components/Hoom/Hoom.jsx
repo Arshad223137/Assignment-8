@@ -1,10 +1,15 @@
+import Banner from "../Banner/Banner";
+import Books from "../BooksSection/Books";
+import NavBar from "../NavBar/NavBar";
 
 const Hoom = () => {
-    return (
-        <div>
-            <h1>Hi there Im from Hoom Component</h1>
-        </div>
-    );
+  return (
+    <div>
+          <NavBar></NavBar>
+          <Banner></Banner>
+          <Books></Books>
+    </div>
+  );
 };
 
 export default Hoom;

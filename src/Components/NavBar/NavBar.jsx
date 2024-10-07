@@ -1,7 +1,17 @@
 import { Link } from "react-router-dom";
 
 const NavBar = () => {
-  const navs = [<Link to={"/"}>Home</Link>];
+  const navs = [
+    <li>
+      <Link to={"/"}>Home</Link>
+    </li>,
+    <li>
+      <Link to={"/listedBooks"}>Listed Books</Link>
+    </li>,
+    <li>
+      <Link to={"/pagesRead"}>Pages to Read</Link>
+    </li>,
+  ];
 
   return (
     <div>
@@ -31,13 +41,14 @@ const NavBar = () => {
               {navs}
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl">daisyUI</a>
+          <a className="text-4xl font-bold">Book Vibe</a>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1"></ul>
+          <ul className="menu menu-horizontal px-1">{navs}</ul>
         </div>
-        <div className="navbar-end">
-          <a className="btn">Button</a>
+        <div className="navbar-end gap-2">
+          <a className="btn text-white text-xl bg-green-500">Sign In</a>
+          <a className="btn text-white text-xl bg-blue-500">Sign Up</a>
         </div>
       </div>
     </div>
