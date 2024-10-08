@@ -1,9 +1,11 @@
-import Hoom from '../Hoom/Hoom';
+import { Outlet } from 'react-router-dom';
+import NavBar from '../NavBar/NavBar';
 
 const Root = () => {
     return (
         <div>
-            <Hoom></Hoom>
+            <NavBar></NavBar>
+            <Outlet></Outlet>
         </div>
     );
 };

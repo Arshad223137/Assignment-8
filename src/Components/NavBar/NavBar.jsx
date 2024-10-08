@@ -2,13 +2,13 @@ import { Link } from "react-router-dom";
 
 const NavBar = () => {
   const navs = [
-    <li>
+    <li key="home">
       <Link to={"/"}>Home</Link>
     </li>,
-    <li>
+    <li key="listedBooks">
       <Link to={"/listedBooks"}>Listed Books</Link>
     </li>,
-    <li>
+    <li key="pagesRead">
       <Link to={"/pagesRead"}>Pages to Read</Link>
     </li>,
   ];
