@@ -1,5 +1,5 @@
-import React, { useEffect } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
+import { saveBooks, saveWishLists } from "../../../public/LocalStorage";
 
 const BookDetails = () => {
   const data = useLoaderData();
@@ -18,6 +18,12 @@ const BookDetails = () => {
     publisher,
     yearOfPublishing,
   } = find;
+  const handleWishlist = () => {
+    saveWishLists(idInt);
+  };
+  const handleBook = () => {
+    saveBooks(idInt);
+  };
 
   return (
     <div>
@@ -58,8 +64,16 @@ const BookDetails = () => {
               </div>
             </div>
             <div className="flex gap-5">
-              <button className="btn bg-green-500 text-white mt-4">Read</button>
-              <button className="btn bg-blue-500 text-white mt-4">
+              <button
+                onClick={() => handleBook(idInt)}
+                className="btn bg-green-500 text-white mt-4"
+              >
+                Read
+              </button>
+              <button
+                onClick={() => handleWishlist(idInt)}
+                className="btn bg-blue-500 text-white mt-4"
+              >
                 Wishlist
               </button>
             </div>

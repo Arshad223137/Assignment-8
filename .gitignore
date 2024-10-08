@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+* text=auto
+*.jsx text eol=lf
+*.json text eol=lf
+*.gitignore text eol=lf
