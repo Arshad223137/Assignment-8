@@ -7,6 +7,7 @@ import Root from "./Components/Root/Root";
 import Hoom from "./Components/Hoom/Hoom";
 import BookDetails from "./Components/BookDetails/BookDetails";
 import ListedBooks from "./Components/ListedBooks/ListedBooks";
+import PagesRead from "./Components/PagesRead/PagesRead";
 
 const router = createBrowserRouter([
   {
@@ -25,6 +26,11 @@ const router = createBrowserRouter([
       {
         path: "/listedBooks",
         element: <ListedBooks></ListedBooks>,
+        loader: () => fetch("/public/fakeData.json"),
+      },
+      {
+        path: "/pagesRead",
+        element: <PagesRead></PagesRead>,
         loader: () => fetch("/public/fakeData.json"),
       },
     ],

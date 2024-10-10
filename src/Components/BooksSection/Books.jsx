@@ -11,8 +11,8 @@ const Books = () => {
   }, []);
   return (
     <div className="my-10">
-      <h1 className="text-2xl font-bold text-center">Hello books</h1>
-      <div className="grid grid-cols-3 gap-4">
+      <h1 className="text-5xl font-bold text-center">Books</h1>
+      <div className="grid lg:grid-cols-3 grid-cols-1 gap-4">
         {books.slice(0, slice).map((book) => (
           <BookCard key={book.bookId} book={book}></BookCard>
         ))}

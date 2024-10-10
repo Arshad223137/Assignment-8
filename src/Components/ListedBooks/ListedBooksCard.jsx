@@ -1,9 +1,11 @@
 import { LuMapPin } from "react-icons/lu";
 import { GoPeople } from "react-icons/go";
 import { SlBookOpen } from "react-icons/sl";
+import { Link } from "react-router-dom";
 
 const ListedBooksCard = ({ read }) => {
   const {
+    bookId,
     bookName,
     author,
     image,
@@ -58,9 +60,11 @@ const ListedBooksCard = ({ read }) => {
             <h4 className="p-2 bg-orange-200 font-bold rounded-full">
               Rating : {rating}
             </h4>
-            <button className="btn bg-green-500 rounded-full text-white">
-              View Details
-            </button>
+            <Link to={`/bookdetails/${bookId}`}>
+              <button className="btn bg-green-500 rounded-full text-white">
+                View Details
+              </button>
+            </Link>
           </div>
         </div>
       </div>

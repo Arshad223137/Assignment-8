@@ -1,0 +1,15 @@
+.active-Link {
+  font-size: 16px;
+  color: green;
+  border: 1px solid green;
+}
+.active-Link:hover {
+  color: green;
+  border: 1px solid green;
+}
+
+.nav-link {
+  background-color: transparent; 
+  color: green;
+  margin: 0 10px;
+}
