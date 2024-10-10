@@ -53,9 +53,9 @@ const BookDetails = () => {
     <div>
       <div className="hero bg-base-200 min-h-screen">
         <div className="hero-content flex-col lg:flex-row lg:gap-10">
-          <img src={image} className="max-w-sm rounded-lg shadow-2xl" />
+          <img src={image} className="max-w-sm h-96 rounded-lg shadow-2xl" />
           <div className="space-y-4">
-            <h1 className="text-4xl font-bold">{bookName}</h1>
+            <h1 className=" text-xl lg:text-4xl font-bold">{bookName}</h1>
             <h3 className="text-xl">By : {author}</h3>
             <p className="border border-gray-200"></p>
             <h3 className="text-xl">{category}</h3>
@@ -64,8 +64,8 @@ const BookDetails = () => {
               <span className="font-bold">Review : </span>
               {review}
             </p>
-            <h3 className="flex gap-5 ">
-              <span className="font-bold mr-10">Tag</span>
+            <h3 className="flex gap-2 lg:gap-5 ">
+              <span className="font-bold lg:mr-10">Tag</span>
               {tags.map((tag, Idx) => (
                 <li key={Idx} className="list-none text-green-500">
                   #{tag}

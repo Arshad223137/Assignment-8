@@ -6,7 +6,7 @@ const BookCard = ({ book }) => {
 
   return (
     <div>
-      <div className="card bg-base-100 w-96 shadow-xl">
+      <div className="card bg-base-100 max-w-96 shadow-xl">
         <Link to={`/bookdetails/${bookId}`}>
           <figure className="bg-stone-200 p-5 m-5">
             <img className="max-w-60 h-40 rounded-lg" src={image} alt="book" />
@@ -19,7 +19,7 @@ const BookCard = ({ book }) => {
                 </li>
               ))}
             </h2>
-            <h1 className="text-2xl font-bold">{bookName}</h1>
+            <h1 className="lg:text-2xl font-bold">{bookName}</h1>
             <p>By : {author}</p>
             <p className="border border-gray-300 my-2"></p>
             <div className="flex justify-between">
