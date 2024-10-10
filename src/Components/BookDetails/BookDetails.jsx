@@ -1,5 +1,12 @@
 import { useLoaderData, useParams } from "react-router-dom";
-import { saveBooks, saveWishLists } from "../../../public/LocalStorage";
+import {
+  findBooks,
+  findWishLists,
+  saveBooks,
+  saveWishLists,
+} from "../../../public/LocalStorage";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const BookDetails = () => {
   const data = useLoaderData();
@@ -19,10 +26,27 @@ const BookDetails = () => {
     yearOfPublishing,
   } = find;
   const handleWishlist = () => {
+    const id = findBooks();
+    const wid = findWishLists();
     saveWishLists(idInt);
+    if (!id.includes(idInt)) {
+      if (!wid.includes(idInt)) {
+        toast.success("Added to your wish list!");
+      } else {
+        toast.warn("Already in your wish list!");
+      }
+    } else {
+      toast.warn("Book already read!");
+    }
   };
   const handleBook = () => {
+    const id = findBooks();
     saveBooks(idInt);
+    if (!id.includes(idInt)) {
+      toast.success("Awesome! You read this easily!");
+    } else {
+      toast.warn("Book already read!");
+    }
   };
 
   return (
@@ -80,6 +104,7 @@ const BookDetails = () => {
           </div>
         </div>
       </div>
+      <ToastContainer />
     </div>
   );
 };

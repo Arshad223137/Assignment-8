@@ -9,7 +9,7 @@ const BookCard = ({ book }) => {
       <div className="card bg-base-100 w-96 shadow-xl">
         <Link to={`/bookdetails/${bookId}`}>
           <figure className="bg-stone-200 p-5 m-5">
-            <img className="max-w-52 h-40 rounded-lg" src={image} alt="book" />
+            <img className="max-w-60 h-40 rounded-lg" src={image} alt="book" />
           </figure>
           <div className="card-body">
             <h2 className="text-[16px] flex gap-2 text-green-600">

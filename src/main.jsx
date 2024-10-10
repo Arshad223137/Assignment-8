@@ -8,11 +8,13 @@ import Hoom from "./Components/Hoom/Hoom";
 import BookDetails from "./Components/BookDetails/BookDetails";
 import ListedBooks from "./Components/ListedBooks/ListedBooks";
 import PagesRead from "./Components/PagesRead/PagesRead";
+import ErrorPage from "./Components/ErrorPage/ErrorPage";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
+    errorElement: <ErrorPage />,
     children: [
       {
         path: "/",
