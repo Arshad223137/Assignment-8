@@ -68,7 +68,7 @@ const NavBar = () => {
               </div>
             </ul>
           </div>
-          <a className="text-xl font-bold ml-28  lg:text-4xl lg:ml-0">
+          <a className="text-2xl font-bold ml-28  lg:text-4xl lg:ml-0">
             Book Vibe
           </a>
         </div>

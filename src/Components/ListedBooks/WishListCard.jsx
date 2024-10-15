@@ -18,9 +18,9 @@ const WishListCard = ({ wish }) => {
   } = wish;
   return (
     <div className="my-5">
-      <div className="card w-72 flex-col card-side bg-base-100 shadow-xl">
+      <div className="card lg:w-full flex-col lg:flex-row card-side bg-base-100 shadow-xl">
         <figure>
-          <img className="w-72 h-48  rounded-xl m-5" src={image} alt="image" />
+          <img className=" h-48  rounded-xl m-5" src={image} alt="image" />
         </figure>
         <div className="card-body">
           <h2 className="lg:text-2xl font-bold">{bookName}</h2>

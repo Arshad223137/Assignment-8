@@ -18,9 +18,9 @@ const ListedBooksCard = ({ read }) => {
   } = read;
   return (
     <div className="my-5">
-      <div className="card w-72 flex-col card-side bg-base-100 shadow-xl">
+      <div className="card lg:w-full flex-col lg:flex-row card-side bg-base-100 shadow-xl">
         <figure>
-          <img className="w-72 h-48  rounded-xl m-5" src={image} alt="image" />
+          <img className="h-48  rounded-xl m-5" src={image} alt="image" />
         </figure>
         <div className="card-body">
           <h2 className="lg:text-2xl font-bold">{bookName}</h2>
@@ -54,14 +54,13 @@ const ListedBooksCard = ({ read }) => {
           </div>
           <p className="border border-gray-200"></p>
           <div className="flex flex-col lg:flex-row lg:items-center gap-5">
-            
-              <h4 className="p-2 bg-blue-300 font-bold rounded-full">
-                Category : {category}
-              </h4>
-              <h4 className="p-2 bg-orange-200 font-bold rounded-full">
-                Rating : {rating}
-              </h4>
-            
+            <h4 className="p-2 bg-blue-300 font-bold rounded-full">
+              Category : {category}
+            </h4>
+            <h4 className="p-2 bg-orange-200 font-bold rounded-full">
+              Rating : {rating}
+            </h4>
+
             <Link to={`/bookdetails/${bookId}`}>
               <button className="btn bg-green-500 rounded-full text-white">
                 View Details
