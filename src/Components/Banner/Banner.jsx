@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import bannerImage from "/src/assets/banner image.jpeg";
 
 const Banner = () => {
   return (
@@ -8,7 +7,7 @@ const Banner = () => {
       <div className="hero bg-base-200 min-h-screen">
         <div className="hero-content flex-col gap-5 lg:gap-10 lg:flex-row-reverse">
           <img
-            src={bannerImage}
+            src="/assets/banner image.jpeg"
             className="lg:max-w-sm h-96 rounded-lg shadow-2xl"
           />
           <div>
