@@ -5,7 +5,7 @@ const Books = () => {
   const [books, setBooks] = useState([]);
   const [slice, setSlice] = useState(6);
   useEffect(() => {
-    fetch("/public/fakeData.json")
+    fetch("/fakeData.json")
       .then((res) => res.json())
       .then((data) => setBooks(data));
   }, []);
